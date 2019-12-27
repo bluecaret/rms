@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: #ddd;
+  background: #222;
+}
+
+#editor {
+  display: none;
+  padding: 20px;
+  width: 500px;
+}
+#editor.active {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0 0 5px 0;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #444;
+  color: #bbb;
+}
+
+.editor-btns {
+  display: flex;
+}
+.editor-btns button:nth-child(2) {
+  margin-left: auto;
+  background: transparent;
+}
+.editor-btns button:last-child {
+  margin-left: 5px;
+  background: transparent;
+}
+
+#actions {
+  display: none;
+  padding: 20px 20px;
+  width: 300px;
+  text-align: right;
+}
+#actions.active {
+  display: block;
+}
+
+#status {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  background: #343434;
+  border-top: 1px dashed #aaa;
+}
+#status.info {
+  background: rgb(41, 100, 230);
+}
+#status.err {
+  background: rgb(197, 64, 31);
+}
+#status.success {
+  background: rgb(19, 175, 123);
+}
+
+.btn {
+  border: 1px solid #aaa;
+  background: #444;
+  color: white;
+  border-radius: 6px;
+  padding:0 15px;
+  line-height: 35px;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#runBtn {
+  display: block;
+  width: 100%;
+}
+
+.link {
+  display: inline-block;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: underline;
+  color: #ccc;
+  margin: 10px 0 0 0;
+  padding: 0;
+}

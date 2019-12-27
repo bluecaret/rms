@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "RMS (Run My Script) - Script runner",
+  "short_name": "RMS",
+  "description": "Easily run JavaScript code on the current browser tab.",
+  "version": "1.0.0",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_title": "RMS (Run My Script) - Script runner",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "19": "images/toolbar-chrome.png",
+      "38": "images/toolbar-chrome@2x.png"
+    }
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "all_frames": true,
+    "js":      ["content.js"]
+  }],
+
+  "icons": {
+    "128": "images/icon_128.png",
+    "16": "images/icon_16.png",
+    "48": "images/icon_48.png"
+  }
+
+}

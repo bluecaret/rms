@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="editor">
+    <label for="code">Paste your code here.</label>
+    <textarea class="form-control" name="code" id="code" rows="14"></textarea>
+    <div class="editor-btns">
+      <button class="btn" type="button" id="saveBtn">Save script</button>
+      <button class="btn" type="button" id="clearBtn">Clear</button>
+      <button class="btn" type="button" id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <div id="actions" class="active">
+    <button class="btn" id="runBtn">Run my script</button>
+    <button class="link" id="editBtn">Edit code</button>
+  </div>
+
+  <div id="status"></div>
+
+  <script src="/popup.js" type="text/javascript"></script>
+</body>
+</html>
