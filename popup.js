@@ -75,9 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
+    var commentedCode = "console.log('%c[START - Run My Script ] ###########################################', 'color: orange; font-weight: bold');" + code.value + "console.log('%c[END - Run My Script ] #############################################', 'color: orange; font-weight: bold');";
+
     setTimeout(() => {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {script: code.value}, function(response) {
+        chrome.tabs.executeScript(tabs[0].id, {
+          code: commentedCode
+        }, function(response) {
           status.innerHTML = textSuccess;
           status.className = 'success';
 
@@ -91,4 +95,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 });
-
